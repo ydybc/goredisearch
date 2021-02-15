@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c4426d0-ae0a-4a99-913e-3ea458a5514f" name="默认的" comment="" />
+    <list default="true" id="9c4426d0-ae0a-4a99-913e-3ea458a5514f" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +18,14 @@
     </option>
   </component>
   <component name="GOROOT" path="D:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="d1b62310-ea0c-4ef2-840d-e48d502febcb" />
+  </component>
   <component name="ProjectId" id="1oSHmsELm971i7ncHhlPkLmKM6y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -89,6 +99,18 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="1273" y="468" key="Github.Dialog.Accounts.Choose" timestamp="1613366145647">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1273" y="468" key="Github.Dialog.Accounts.Choose/0.0.2752.1112@0.0.2752.1112" timestamp="1613366145647" />
+    <state x="1226" y="436" key="Github.ShareDialog" timestamp="1613365591782">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1226" y="436" key="Github.ShareDialog/0.0.2752.1112@0.0.2752.1112" timestamp="1613365591782" />
+    <state x="1200" y="258" key="Github.UntrackedFilesDialog" timestamp="1613366137837">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1200" y="258" key="Github.UntrackedFilesDialog/0.0.2752.1112@0.0.2752.1112" timestamp="1613366137837" />
     <state width="2709" height="305" key="GridCell.Tab.0.bottom" timestamp="1613363980749">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
@@ -109,5 +131,17 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1333" y="96" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1613365163230" />
+    <state x="969" y="289" key="Vcs.Push.Dialog.v2" timestamp="1613368610897">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="969" y="289" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1613368610897" />
+    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613368617193">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2752.1112@0.0.2752.1112" timestamp="1613368617193" />
+    <state x="1039" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1613368427779">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1039" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2752.1112@0.0.2752.1112" timestamp="1613368427779" />
   </component>
 </project>
