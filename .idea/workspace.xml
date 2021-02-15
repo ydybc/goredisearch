@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9c4426d0-ae0a-4a99-913e-3ea458a5514f" name="默认的" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="D:\Go" />
+  <component name="ProjectId" id="1oSHmsELm971i7ncHhlPkLmKM6y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Go project\src\go-redisearch\redisearch" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go 测试.go-redisearch 中的 TestNewClient (1)">
+    <configuration name="go-redisearch 中的 TestNew2" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-redisearch" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go-redisearch" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNew2\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go-redisearch 中的 TestNewClient (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-redisearch" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go-redisearch" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNewClient\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go-redisearch 中的 TestNewClient" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-redisearch" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go-redisearch" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNewClient\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go 测试.go-redisearch 中的 TestNewClient (1)" />
+        <item itemvalue="Go 测试.go-redisearch 中的 TestNewClient" />
+        <item itemvalue="Go 测试.go-redisearch 中的 TestNew2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2709" height="305" key="GridCell.Tab.0.bottom" timestamp="1613363980749">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state width="2709" height="305" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1613363980749" />
+    <state width="2709" height="305" key="GridCell.Tab.0.center" timestamp="1613363980749">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state width="2709" height="305" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1613363980749" />
+    <state width="2709" height="305" key="GridCell.Tab.0.left" timestamp="1613363980749">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state width="2709" height="305" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1613363980749" />
+    <state width="2709" height="305" key="GridCell.Tab.0.right" timestamp="1613363980749">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state width="2709" height="305" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1613363980749" />
+    <state x="1333" y="96" key="SettingsEditor" timestamp="1613365163230">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1333" y="96" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1613365163230" />
+  </component>
+</project>
