@@ -2,7 +2,6 @@ package redisearch
 
 import (
 	"context"
-	"fmt"
 	"github.com/go-redis/redis/v8"
 	"go-redisearch/goRedis"
 	"math"
@@ -353,87 +352,40 @@ func (q *Query) SummarizeOptions(opts SummaryOptions) *Query {
 	return q
 }
 
-
-func Index(i *redis.Client,ctx context.Context, docs ...Document) error {
+func Index(i *redis.Client, ctx context.Context, docs ...Document) error {
 	conn := i.TxPipeline()
-	var merr MultiError
+	var mErr MultiError
 
-	for _, doc := range docs {
+	for i, doc := range docs {
 		args := make(goRedis.Args, 0, 6+len(doc.Properties))
 		for k, f := range doc.Properties {
 			args = append(args, k, f)
 		}
 		_, err := conn.HSet(ctx, doc.Id, args...).Result()
-		if err!=nil{
-			merr = NewMultiError(len(docs))
+		if err != nil {
+			if mErr == nil {
+				mErr = NewMultiError(len(docs))
+			}
+			mErr[i] = err
+
+			return mErr
 		}
 	}
 	cmders, err := conn.Exec(ctx)
-	if err!=nil{
+	if err != nil {
 		return err
 	}
-	if merr == nil{
+	for k, cmd := range cmders {
+		if cmd.Err() != nil {
+			if mErr == nil {
+				mErr = NewMultiError(len(docs))
+			}
+			mErr[k] = cmd.Err()
+		}
+	}
+	if mErr == nil {
 		return nil
 	}
-	for k,cmd := range cmders {
-		merr[k] = cmd.Err()
-	}
-	return merr
+	return mErr
 
-}
-// IndexOptionsADD indexes multiple documents on the index, with optional Options passed to options
-func IndexOptionsADD(i *redis.Client,ctx context.Context,name string,opts IndexingOptions, docs ...Document) error {
-
-	conn := i.TxPipeline()
-	//n := 0
-	var merr MultiError
-
-	for _, doc := range docs {
-		args := make(goRedis.Args, 0, 6+len(doc.Properties))
-		args = append(args, name, doc.Id, doc.Score)
-		args = SerializeIndexingOptions(opts, args)
-
-		if doc.Payload != nil {
-			args = args.Add("PAYLOAD", doc.Payload)
-		}
-
-		args = append(args, "FIELDS")
-
-		for k, f := range doc.Properties {
-			args = append(args, k, f)
-		}
-		ft:=[]interface{}{"FT.ADD"}
-		fmt.Println(append(ft,args...)...)
-		conn.Do(ctx, append(ft,args...)...)
-	}
-	cmders, err := conn.Exec(ctx)
-	if err!=nil{
-		return err
-	}
-	merr = NewMultiError(len(cmders))
-	for k,cmd := range cmders {
-		//key := cmd.Name() // maybe use cmd.Args() to distinguish
-
-		merr[k] = cmd.Err()
-	}
-	return merr
-	//if err := conn.Flush(); err != nil {
-	//	return err
-	//}
-	//
-	//for n > 0 {
-	//	if _, err := conn.Receive(); err != nil {
-	//		if merr == nil {
-	//			merr = NewMultiError(len(docs))
-	//		}
-	//		merr[n-1] = err
-	//	}
-	//	n--
-	//}
-	//
-	//if merr == nil {
-	//	return nil
-	//}
-	//
-	//return merr
 }

@@ -7,44 +7,48 @@ import (
 	"go-redisearch/redisearch"
 )
 
-type rS struct {
-	R  *redis.Client
-	Ctx context.Context
+type RS struct {
+	R         *redis.Client
+	Ctx       context.Context
 	IndexName string
 }
 
-func NewClient(addr,pass string,dbNum,poolSize int,indexName string) (rS,error) {
+func NewClient(addr, pass string, dbNum, poolSize int, indexName string) (RS, error) {
 	client, err := redisearch.InitClient(addr, pass, dbNum, poolSize)
-	if err!=nil{
-		return rS{},err
+	if err != nil {
+		return RS{}, err
 	}
-	return rS{R: client,Ctx: context.Background(),IndexName: indexName},nil
+	return RS{R: client, Ctx: context.Background(), IndexName: indexName}, nil
 }
-func (r rS) InitIndex(name string)  {
+
+func (r RS) SetIndex(name string) {
 	r.IndexName = name
 }
-func (r rS) DropIndex(deleteDocuments bool) (interface{},error) {
+
+func (r RS) DropIndex(deleteDocuments bool) (err error) {
 	if deleteDocuments {
-		return redisearch.ClientDo(r.R,r.Ctx, "FT.DROPINDEX", r.IndexName, "DD")
+		_, err = redisearch.ClientDo(r.R, r.Ctx, "FT.DROPINDEX", r.IndexName, "DD")
 	} else {
-		return redisearch.ClientDo(r.R,r.Ctx,"FT.DROPINDEX", r.IndexName)
+		_, err = redisearch.ClientDo(r.R, r.Ctx, "FT.DROPINDEX", r.IndexName)
 	}
+	return
 }
-func (r rS) CreateIndexWithIndexDefinition(schema *redisearch.Schema, definition *redisearch.IndexDefinition) (err error) {
+func (r RS) CreateIndexWithIndexDefinition(schema *redisearch.Schema, definition *redisearch.IndexDefinition) (err error) {
 	return r.indexWithDefinition(schema, definition)
 }
-func NewDocument(id string, score float32)redisearch.Document{
-	return redisearch.NewDocument(id,score)
+func NewDocument(id string, score float32) redisearch.Document {
+	return redisearch.NewDocument(id, score)
 }
-func (r rS) Index( docs ...redisearch.Document)error{
-	return  redisearch.Index(r.R,r.Ctx,docs...)
+func (r RS) Index(docs ...redisearch.Document) error {
+	return redisearch.Index(r.R, r.Ctx, docs...)
 }
-func (r rS) Search(q *redisearch.Query)(docs []redisearch.Document, total int, err error){
-	return  redisearch.Search(r.R,r.Ctx,r.IndexName,q)
+func (r RS) Search(q *redisearch.Query) (docs []redisearch.Document, total int, err error) {
+	return redisearch.Search(r.R, r.Ctx, r.IndexName, q)
 }
+
 // internal method
-func (r rS) indexWithDefinition( schema *redisearch.Schema, definition *redisearch.IndexDefinition) (err error) {
-	args := goRedis.Args{"FT.CREATE",r.IndexName}
+func (r RS) indexWithDefinition(schema *redisearch.Schema, definition *redisearch.IndexDefinition) (err error) {
+	args := goRedis.Args{"FT.CREATE", r.IndexName}
 	if definition != nil {
 		args = definition.Serialize(args)
 	}
@@ -55,7 +59,7 @@ func (r rS) indexWithDefinition( schema *redisearch.Schema, definition *redisear
 	}
 	//conn := i.pool.Get()
 	//defer conn.Close()
-	_, err = redisearch.ClientDo(r.R,r.Ctx, args...)
+	_, err = redisearch.ClientDo(r.R, r.Ctx, args...)
 
 	//_, err = conn.Do("FT.CREATE", args...)
 	return
