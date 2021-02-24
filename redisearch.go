@@ -39,7 +39,7 @@ func (r RS) CreateIndexWithIndexDefinition(schema *redisearch.Schema, definition
 func NewDocument(id string, score float32) redisearch.Document {
 	return redisearch.NewDocument(id, score)
 }
-func (r RS) Index(docs ...redisearch.Document) error {
+func (r RS) Set(docs ...redisearch.Document) error {
 	return redisearch.Index(r.R, r.Ctx, docs...)
 }
 func (r RS) Search(q *redisearch.Query) (docs []redisearch.Document, total int, err error) {

@@ -64,8 +64,8 @@ func TestNewClient(t *testing.T) {
 		instData = append(instData, v)
 	}
 	//插入&更新 索引
-	if err := rs.Index(instData...); err != nil {
-		t.Error("Index", err)
+	if err := rs.Set(instData...); err != nil {
+		t.Error("SetIndex", err)
 	}
 	// 进行搜索
 	keyWord := "汪"
@@ -75,7 +75,7 @@ func TestNewClient(t *testing.T) {
 		SetInFields("name", "feature").       //在什么字段内搜索
 		Limit(0, 4).
 		Highlight(nil, "<b>", "</b>"))
-	t.Logf("word:%s,res:%+v,total:%d,err:%s\n", keyWord, docs, total, err)
+	t.Logf("word:%s,res:%+v,total:%d,err:%v\n", keyWord, docs, total, err)
 	keyWord = "公汪"
 	docs, total, err = rs.Search(redisearch.NewQuery(keyWord).
 		SetFlags(redisearch.QueryWithScores). //评分
@@ -83,7 +83,7 @@ func TestNewClient(t *testing.T) {
 		SetInFields("name", "feature").       //在什么字段内搜索
 		Limit(0, 4).
 		Highlight(nil, "<b>", "</b>"))
-	t.Logf("word:%s,res:%+v,total:%d,err:%s\n", keyWord, docs, total, err)
+	t.Logf("word:%s,res:%+v,total:%d,err:%v\n", keyWord, docs, total, err)
 	keyWord = "母汪"
 	docs, total, err = rs.Search(redisearch.NewQuery(keyWord).
 		SetFlags(redisearch.QueryWithScores). //评分
@@ -91,5 +91,5 @@ func TestNewClient(t *testing.T) {
 		SetInFields("name", "feature").       //在什么字段内搜索
 		Limit(0, 4).
 		Highlight(nil, "<b>", "</b>"))
-	t.Logf("word:%s,res:%+v,total:%d,err:%s\n", keyWord, docs, total, err)
+	t.Logf("word:%s,res:%+v,total:%d,err:%v\n", keyWord, docs, total, err)
 }

@@ -2,6 +2,7 @@ package redisearch
 
 import (
 	"context"
+	"fmt"
 	"github.com/go-redis/redis/v8"
 	"go-redisearch/goRedis"
 	"strconv"
@@ -39,8 +40,8 @@ func (a *Autocompleter) Delete() error {
 	return err
 }
 
-// AddTerms pushes new term suggestions to the index
-func (a *Autocompleter) AddTerms(terms ...Suggestion) error {
+// AddSuggestions pushes new term suggestions to the index
+func (a *Autocompleter) AddSuggestions(terms ...Suggestion) error {
 	var mErr MultiError
 	conn := a.R.TxPipeline()
 	for i, term := range terms {
@@ -51,7 +52,7 @@ func (a *Autocompleter) AddTerms(terms ...Suggestion) error {
 		if term.Payload != "" {
 			args = append(args, "PAYLOAD", term.Payload)
 		}
-
+		fmt.Println(args)
 		if err := conn.Do(a.Ctx, args...).Err(); err != nil {
 			if mErr == nil {
 				mErr = NewMultiError(len(terms))
@@ -79,8 +80,8 @@ func (a *Autocompleter) AddTerms(terms ...Suggestion) error {
 	return mErr
 }
 
-// AddTerms pushes new term suggestions to the index
-func (a *Autocompleter) DeleteTerms(terms ...Suggestion) error {
+// DeleteSuggestions pushes new term suggestions to the index
+func (a *Autocompleter) DeleteSuggestions(terms ...Suggestion) error {
 	var mErr MultiError
 	conn := a.R.TxPipeline()
 	for i, term := range terms {
@@ -113,7 +114,7 @@ func (a *Autocompleter) DeleteTerms(terms ...Suggestion) error {
 	return mErr
 }
 
-// AddTerms pushes new term suggestions to the index
+// pushes new term suggestions to the index
 func (a *Autocompleter) Length() (len int64, err error) {
 	len, err = a.R.Do(a.Ctx, "FT.SUGLEN", a.IndexName).Int64()
 	return
@@ -123,7 +124,7 @@ func (a *Autocompleter) Length() (len int64, err error) {
 // If fuzzy is set, we also complete for prefixes that are in 1 Levenshten distance from the
 // given prefix
 //
-// Deprecated: Please use SuggestOpts() instead
+// Deprecated: Please use GetSuggestions() instead
 func (a *Autocompleter) Suggest(prefix string, num int, fuzzy bool) (ret []Suggestion, err error) {
 	seropts := DefaultSuggestOptions
 	seropts.Num = num
@@ -140,11 +141,11 @@ func (a *Autocompleter) Suggest(prefix string, num int, fuzzy bool) (ret []Sugge
 	return
 }
 
-// SuggestOpts gets completion suggestions from the Autocompleter dictionary to the given prefix.
+// GetSuggestions gets completion suggestions from the Autocompleter dictionary to the given prefix.
 // SuggestOptions are passed allowing you specify if the returned values contain a payload, and scores.
 // If SuggestOptions.Fuzzy is set, we also complete for prefixes that are in 1 Levenshtein distance from the
 // given prefix
-func (a *Autocompleter) SuggestOpts(prefix string, opts SuggestOptions) (ret []Suggestion, err error) {
+func (a *Autocompleter) GetSuggestions(prefix string, opts SuggestOptions) (ret []Suggestion, err error) {
 	args, inc := a.Serialize("FT.SUGGET", prefix, opts)
 	vals, err := goRedis.Strings(a.R.Do(a.Ctx, args...).Result())
 	if err != nil {

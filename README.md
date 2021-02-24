@@ -17,13 +17,22 @@ Golang [RediSearch](http://redisearch.io) 库是基于 [redigo](https://github.c
 
 ### 暂时只实现了基本功能api 
 只有 创建 添加&更新 查询 删除 其他等后续如果需要再添加
+新增 自动补全
 
-go-redisearch  | RediSearch  | 介绍
- ---- | ----- | ------  
- CreateIndex  | [FT.CREATE](https://oss.redislabs.com/redisearch/Commands.html#ftcreate) | *
- Index  | [HSET](https://oss.redislabs.com/redisearch/Commands/#hsethsetnxhdelhincrbyhdecrby) | **FT.ADD** 已经被RediSearch2.0淘汰,改为 **HSET**
- Search  | [FT.SEARCH](https://oss.redislabs.com/redisearch/Commands.html#ftsearch) | * 
- DropIndex  | [FT.DROPINDEX](https://oss.redislabs.com/redisearch/Commands/#ftdropindex) | **FT.DROP** 也已经被淘汰,改为 **FT.DROPINDEX**
+搜索  | RediSearch  | 介绍
+---- | ----- | ------  
+CreateIndex  | [FT.CREATE](https://oss.redislabs.com/redisearch/Commands.html#ftcreate) | *
+Set  | [HSET](https://oss.redislabs.com/redisearch/Commands/#hsethsetnxhdelhincrbyhdecrby) |RS2支持**HSET**,可直接使用redis方法操作cudr 
+Search  | [FT.SEARCH](https://oss.redislabs.com/redisearch/Commands.html#ftsearch) | * 
+DropIndex  | [FT.DROPINDEX](https://oss.redislabs.com/redisearch/Commands/#ftdropindex) | **FT.DROP** 也已经被淘汰,改为 **FT.DROPINDEX**
+
+自动完成  | RediSearch  | 介绍
+---- | ----- | ------  
+AddSuggestions  | [FT.SUGADD](https://oss.redislabs.com/redisearch/Commands.html#ftsugadd) | 见test example
+GetSuggestions  |[FT.SUGGET](https://oss.redislabs.com/redisearch/Commands.html#ftsugget) |
+DeleteSuggestions  | [FT.SUGDEL](https://oss.redislabs.com/redisearch/Commands.html#ftsugdel) |
+Length  | [FT.SUGLEN](https://oss.redislabs.com/redisearch/Commands.html#ftsuglen) | 
+
  
  ### 感谢
  引用借鉴了[redigo](https://github.com/gomodule/redigo) , [redisearch-go](https://github.com/RediSearch/redisearch-go)

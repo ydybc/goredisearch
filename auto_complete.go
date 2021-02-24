@@ -5,6 +5,7 @@ import (
 	"go-redisearch/redisearch"
 )
 
+//自动补全
 func NewAutoCompleter(addr, pass string, dbNum, poolSize int, indexName string) (redisearch.Autocompleter, error) {
 	client, err := redisearch.InitClient(addr, pass, dbNum, poolSize)
 	if err != nil {
