@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4426d0-ae0a-4a99-913e-3ea458a5514f" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/init.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_complete.go" beforeDir="false" afterPath="$PROJECT_DIR$/auto_complete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_conplete_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/auto_conplete_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisearch.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisearch_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisearch/autocomplete.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +47,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Go project\src\go-redisearch" />
       <recent name="D:\Go project\src\go-redisearch\redisearch" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -131,16 +129,17 @@
     <MESSAGE value="update auto complete" />
     <MESSAGE value="update example" />
     <MESSAGE value="update relations" />
-    <option name="LAST_COMMIT_MESSAGE" value="update relations" />
+    <MESSAGE value="update Link mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Link mode" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1342" y="153" key="CommitChangelistDialog2" timestamp="1614146239818">
+    <state x="1342" y="153" key="CommitChangelistDialog2" timestamp="1614147324072">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="1342" y="153" key="CommitChangelistDialog2/0.0.2752.1112@0.0.2752.1112" timestamp="1614146239818" />
+    <state x="1342" y="153" key="CommitChangelistDialog2/0.0.2752.1112@0.0.2752.1112" timestamp="1614147324072" />
     <state x="1157" y="311" key="FileChooserDialogImpl" timestamp="1614082076861">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
@@ -157,22 +156,22 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1200" y="258" key="Github.UntrackedFilesDialog/0.0.2752.1112@0.0.2752.1112" timestamp="1613366137837" />
-    <state width="2709" height="305" key="GridCell.Tab.0.bottom" timestamp="1614147116506">
+    <state width="2709" height="305" key="GridCell.Tab.0.bottom" timestamp="1614148164321">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2709" height="305" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1614147116506" />
-    <state width="2709" height="305" key="GridCell.Tab.0.center" timestamp="1614147116506">
+    <state width="2709" height="305" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1614148164321" />
+    <state width="2709" height="305" key="GridCell.Tab.0.center" timestamp="1614148164321">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2709" height="305" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1614147116506" />
-    <state width="2709" height="305" key="GridCell.Tab.0.left" timestamp="1614147116505">
+    <state width="2709" height="305" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1614148164321" />
+    <state width="2709" height="305" key="GridCell.Tab.0.left" timestamp="1614148164321">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2709" height="305" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1614147116505" />
-    <state width="2709" height="305" key="GridCell.Tab.0.right" timestamp="1614147116506">
+    <state width="2709" height="305" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1614148164321" />
+    <state width="2709" height="305" key="GridCell.Tab.0.right" timestamp="1614148164321">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2709" height="305" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1614147116506" />
+    <state width="2709" height="305" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1614148164321" />
     <state width="2709" height="376" key="GridCell.Tab.1.bottom" timestamp="1614145227279">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
@@ -193,14 +192,14 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1333" y="96" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1613365163230" />
-    <state x="969" y="289" key="Vcs.Push.Dialog.v2" timestamp="1614146246263">
+    <state x="969" y="289" key="Vcs.Push.Dialog.v2" timestamp="1614147329623">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="969" y="289" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614146246263" />
-    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614145889175">
+    <state x="969" y="289" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614147329623" />
+    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614147326796">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614145889175" />
+    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614147326796" />
     <state x="1075" y="288" width="601" height="594" key="find.popup" timestamp="1614146130394">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
