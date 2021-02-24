@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4426d0-ae0a-4a99-913e-3ea458a5514f" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_complete.go" beforeDir="false" afterPath="$PROJECT_DIR$/auto_complete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_conplete_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/auto_conplete_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisearch.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisearch/autocomplete.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch/autocomplete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redisearch_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,16 +121,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set README.md" />
     <MESSAGE value="update auto complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="update auto complete" />
+    <MESSAGE value="update example" />
+    <option name="LAST_COMMIT_MESSAGE" value="update example" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1066" y="140" key="CommitChangelistDialog2" timestamp="1613459233670">
+    <state x="1771" y="138" key="CommitChangelistDialog2" timestamp="1614142156569">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="1066" y="140" key="CommitChangelistDialog2/0.0.2752.1112@0.0.2752.1112" timestamp="1613459233670" />
+    <state x="1771" y="138" key="CommitChangelistDialog2/0.0.2752.1112@0.0.2752.1112" timestamp="1614142156569" />
     <state x="1157" y="311" key="FileChooserDialogImpl" timestamp="1614082076861">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
@@ -153,22 +148,22 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1200" y="258" key="Github.UntrackedFilesDialog/0.0.2752.1112@0.0.2752.1112" timestamp="1613366137837" />
-    <state width="2709" height="305" key="GridCell.Tab.0.bottom" timestamp="1614141496621">
+    <state width="2709" height="305" key="GridCell.Tab.0.bottom" timestamp="1614141941390">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2709" height="305" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1614141496621" />
-    <state width="2709" height="305" key="GridCell.Tab.0.center" timestamp="1614141496621">
+    <state width="2709" height="305" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1614141941390" />
+    <state width="2709" height="305" key="GridCell.Tab.0.center" timestamp="1614141941390">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2709" height="305" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1614141496621" />
-    <state width="2709" height="305" key="GridCell.Tab.0.left" timestamp="1614141496621">
+    <state width="2709" height="305" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1614141941390" />
+    <state width="2709" height="305" key="GridCell.Tab.0.left" timestamp="1614141941390">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2709" height="305" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1614141496621" />
-    <state width="2709" height="305" key="GridCell.Tab.0.right" timestamp="1614141496621">
+    <state width="2709" height="305" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1614141941390" />
+    <state width="2709" height="305" key="GridCell.Tab.0.right" timestamp="1614141941390">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="2709" height="305" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1614141496621" />
+    <state width="2709" height="305" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1614141941390" />
     <state width="2709" height="376" key="GridCell.Tab.1.bottom" timestamp="1614139774312">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
@@ -189,14 +184,14 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1333" y="96" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1613365163230" />
-    <state x="969" y="289" key="Vcs.Push.Dialog.v2" timestamp="1613459243754">
+    <state x="969" y="289" key="Vcs.Push.Dialog.v2" timestamp="1614142162437">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="969" y="289" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1613459243754" />
-    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613368774262">
+    <state x="969" y="289" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614142162437" />
+    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614142160287">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2752.1112@0.0.2752.1112" timestamp="1613368774262" />
+    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614142160287" />
     <state x="1039" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1613453292194">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
