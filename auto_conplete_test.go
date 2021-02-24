@@ -1,7 +1,7 @@
 package go_redisearch
 
 import (
-	"go-redisearch/redisearch"
+	"github.com/ydybc/go-redisearch/redisearch"
 	"log"
 	"testing"
 )

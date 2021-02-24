@@ -1,7 +1,7 @@
 package redisearch
 
 import (
-	goRedis "go-redisearch/goRedis"
+	goRedis "github.com/ydybc/go-redisearch/goRedis"
 )
 
 // IndexInfo - Structure showing information about an existing index

@@ -2,7 +2,7 @@ package go_redisearch
 
 import (
 	"context"
-	"go-redisearch/redisearch"
+	"github.com/ydybc/go-redisearch/redisearch"
 )
 
 //自动补全

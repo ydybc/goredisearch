@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/go-redis/redis/v8"
-	"go-redisearch/goRedis"
+	"github.com/ydybc/go-redisearch/goRedis"
 	"strconv"
 )
 

@@ -3,32 +3,34 @@ package redisearch
 import (
 	"context"
 	"github.com/go-redis/redis/v8"
-	"go-redisearch/goRedis"
+	"github.com/ydybc/go-redisearch/goRedis"
 	"log"
 	"time"
 )
+
 var (
 	//rdb  *redis.Client
 	//rCtx context.Context = context.Background()
 	NotFound = redis.Nil
 )
-func InitClient(addr,pass string,dbNum,poolSize int) (rdb *redis.Client,err error) {
+
+func InitClient(addr, pass string, dbNum, poolSize int) (rdb *redis.Client, err error) {
 	rdb = redis.NewClient(&redis.Options{
 		Addr:     addr,
-		Password: pass,  // no password set
-		DB:       0,   // use default DB
+		Password: pass, // no password set
+		DB:       0,    // use default DB
 		PoolSize: 1000, // 连接池大小
 	})
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 	_, err = rdb.Ping(ctx).Result()
-	return rdb,err
+	return rdb, err
 }
-func ClientDo(rdb *redis.Client,ctx context.Context,args ...interface{})(interface{},error){
+func ClientDo(rdb *redis.Client, ctx context.Context, args ...interface{}) (interface{}, error) {
 	return rdb.Do(ctx, args...).Result()
 }
-func Search(rdb *redis.Client,ctx context.Context,name string,q *Query) (docs []Document, total int, err error) {
-	args := goRedis.Args{"FT.SEARCH",name}
+func Search(rdb *redis.Client, ctx context.Context, name string, q *Query) (docs []Document, total int, err error) {
+	args := goRedis.Args{"FT.SEARCH", name}
 	args = append(args, q.serialize()...)
 	res, err := goRedis.Values(rdb.Do(ctx, args...).Result())
 	if err != nil {

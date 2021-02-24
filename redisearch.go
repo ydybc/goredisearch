@@ -3,8 +3,8 @@ package go_redisearch
 import (
 	"context"
 	"github.com/go-redis/redis/v8"
-	"go-redisearch/goRedis"
-	"go-redisearch/redisearch"
+	"github.com/ydybc/go-redisearch/goRedis"
+	"github.com/ydybc/go-redisearch/redisearch"
 )
 
 type RS struct {

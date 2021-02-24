@@ -2,7 +2,7 @@ package redisearch
 
 import (
 	"fmt"
-	"go-redisearch/goRedis"
+	"github.com/ydybc/go-redisearch/goRedis"
 )
 
 // FieldType is an enumeration of field/property types
@@ -380,4 +380,3 @@ func serializeField(f Field, args goRedis.Args) (argsOut goRedis.Args, err error
 	}
 	return
 }
-

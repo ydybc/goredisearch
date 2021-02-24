@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4426d0-ae0a-4a99-913e-3ea458a5514f" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_complete.go" beforeDir="false" afterPath="$PROJECT_DIR$/auto_complete.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auto_conplete_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/auto_conplete_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goRedis/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch/redis.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goRedis/type.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch/type.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redisearch.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redisearch/autocomplete.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch/autocomplete.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redisearch/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redisearch/index.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch/index.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redisearch/query.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch/query.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redisearch/schema.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch/schema.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redisearch_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/redisearch_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,29 @@
       <recent name="D:\Go project\src\go-redisearch\redisearch" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 测试.go-redisearch 中的 TestNewAutoCompleter (1)">
+  <component name="RunManager" selected="Go 测试.github.com/ydybc/go-redisearch 中的 TestNewClient">
+    <configuration name="github.com/ydybc/go-redisearch 中的 TestNewAutoCompleter" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-redisearch" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/ydybc/go-redisearch" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNewAutoCompleter\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/ydybc/go-redisearch 中的 TestNewClient" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-redisearch" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/ydybc/go-redisearch" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestNewClient\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go-redisearch 中的 TestNewAutoCompleter (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-redisearch" />
       <working_directory value="$PROJECT_DIR$" />
@@ -83,28 +106,6 @@
       <pattern value="^\QTestNewAutoCompleter\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go-redisearch 中的 TestNewClient (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-redisearch" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go-redisearch" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestNewClient\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go-redisearch 中的 TestNewClient (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go-redisearch" />
-      <working_directory value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="go-redisearch" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestNewClient\E$" />
-      <method v="2" />
-    </configuration>
     <configuration name="go-redisearch 中的 TestNewClient (3)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-redisearch" />
       <working_directory value="$PROJECT_DIR$" />
@@ -118,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 测试.github.com/ydybc/go-redisearch 中的 TestNewClient" />
+        <item itemvalue="Go 测试.github.com/ydybc/go-redisearch 中的 TestNewAutoCompleter" />
         <item itemvalue="Go 测试.go-redisearch 中的 TestNewAutoCompleter (1)" />
         <item itemvalue="Go 测试.go-redisearch 中的 TestNewClient (3)" />
         <item itemvalue="Go 测试.go-redisearch 中的 TestNewAutoCompleter" />
-        <item itemvalue="Go 测试.go-redisearch 中的 TestNewClient (2)" />
-        <item itemvalue="Go 测试.go-redisearch 中的 TestNewClient (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -134,16 +135,17 @@
     <MESSAGE value="set README.md" />
     <MESSAGE value="update auto complete" />
     <MESSAGE value="update example" />
-    <option name="LAST_COMMIT_MESSAGE" value="update example" />
+    <MESSAGE value="update relations" />
+    <option name="LAST_COMMIT_MESSAGE" value="update relations" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1342" y="153" key="CommitChangelistDialog2" timestamp="1614142440499">
+    <state x="1342" y="153" key="CommitChangelistDialog2" timestamp="1614145885584">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="1342" y="153" key="CommitChangelistDialog2/0.0.2752.1112@0.0.2752.1112" timestamp="1614142440499" />
+    <state x="1342" y="153" key="CommitChangelistDialog2/0.0.2752.1112@0.0.2752.1112" timestamp="1614145885584" />
     <state x="1157" y="311" key="FileChooserDialogImpl" timestamp="1614082076861">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
@@ -196,14 +198,18 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1333" y="96" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1613365163230" />
-    <state x="969" y="289" key="Vcs.Push.Dialog.v2" timestamp="1614142452065">
+    <state x="969" y="289" key="Vcs.Push.Dialog.v2" timestamp="1614145891555">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="969" y="289" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614142452065" />
-    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614142446791">
+    <state x="969" y="289" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614145891555" />
+    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614145889175">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614142446791" />
+    <state x="1190" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2752.1112@0.0.2752.1112" timestamp="1614145889175" />
+    <state x="1075" y="288" width="601" height="594" key="find.popup" timestamp="1614146130394">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1075" y="288" width="601" height="594" key="find.popup/0.0.2752.1112@0.0.2752.1112" timestamp="1614146130394" />
     <state x="1039" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1613453292194">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
