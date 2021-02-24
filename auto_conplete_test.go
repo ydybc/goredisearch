@@ -8,9 +8,9 @@ import (
 
 //测试自动补全
 func TestNewAutoCompleter(t *testing.T) {
-	ac, err := NewAutoCompleter("192.168.1.117:6666", "", 0, 1000, "testAutoC")
+	ac, err := NewAutoCompleterClient("192.168.1.117:6666", "", 0, 1000, "testAutoC")
 	if err != nil {
-		t.Error("NewAutoCompleter", err)
+		t.Error("NewAutoCompleterClient", err)
 	}
 	//
 	//初始化需要补全的句子

@@ -13,14 +13,19 @@ type RS struct {
 	IndexName string
 }
 
-func NewClient(addr, pass string, dbNum, poolSize int, indexName string) (RS, error) {
+func InitBaseClient(addr, pass string, dbNum, poolSize int) (rdb *redis.Client, err error) {
+	return redisearch.InitClient(addr, pass, dbNum, poolSize)
+}
+func NewSearchClient(addr, pass string, dbNum, poolSize int, indexName string) (RS, error) {
 	client, err := redisearch.InitClient(addr, pass, dbNum, poolSize)
 	if err != nil {
 		return RS{}, err
 	}
 	return RS{R: client, Ctx: context.Background(), IndexName: indexName}, nil
 }
-
+func DeriveSearchClient(client *redis.Client, indexName string) (RS, error) {
+	return RS{R: client, Ctx: context.Background(), IndexName: indexName}, nil
+}
 func (r RS) SetIndex(name string) {
 	r.IndexName = name
 }

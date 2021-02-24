@@ -26,9 +26,9 @@ func TestNewClient(t *testing.T) {
 		}
 	)
 	//初始化 link redis
-	rs, err := NewClient("192.168.1.117:6666", "", 0, 1000, "testIndex")
+	rs, err := NewSearchClient("192.168.1.117:6666", "", 0, 1000, "testIndex")
 	if err != nil {
-		t.Error("NewClient", err)
+		t.Error("Client", err)
 	}
 	//Weight 设置权重
 	name := redisearch.NewTextFieldOptions("name", redisearch.TextFieldOptions{Weight: 2.0, Sortable: true})
