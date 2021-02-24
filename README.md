@@ -16,7 +16,6 @@ Golang [RediSearch](http://redisearch.io) 库是基于 [redigo](https://github.c
 但是更新较慢.好多RediSearch2.0的命令并不支持
 
 ### 暂时只实现了基本功能api 
-只有 创建 添加&更新 查询 删除 其他等后续如果需要再添加
 新增 自动补全
 
 搜索 [example](https://github.com/ydybc/go-redisearch/blob/master/redisearch_test.go)  | RediSearch  | other
@@ -26,7 +25,7 @@ Set  | [HSET](https://oss.redislabs.com/redisearch/Commands/#hsethsetnxhdelhincr
 Search  | [FT.SEARCH](https://oss.redislabs.com/redisearch/Commands.html#ftsearch) | * 
 DropIndex  | [FT.DROPINDEX](https://oss.redislabs.com/redisearch/Commands/#ftdropindex) | **FT.DROP** 也已经被淘汰,改为 **FT.DROPINDEX**
 
-自动完成 [example](https://github.com/ydybc/go-redisearch/blob/master/auto_conplete_test.go) | RediSearch  | other
+自动补全 [example](https://github.com/ydybc/go-redisearch/blob/master/auto_conplete_test.go) | RediSearch  | other
 ---- | ----- | ------  
 AddSuggestions  | [FT.SUGADD](https://oss.redislabs.com/redisearch/Commands.html#ftsugadd) | 见test example
 GetSuggestions  |[FT.SUGGET](https://oss.redislabs.com/redisearch/Commands.html#ftsugget) |
