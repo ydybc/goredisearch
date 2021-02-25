@@ -1,7 +1,7 @@
-package go_redisearch
+package goredisearch
 
 import (
-	"github.com/ydybc/go-redisearch/redisearch"
+	"github.com/ydybc/goredisearch/redisearch"
 	"strconv"
 	"testing"
 	"time"

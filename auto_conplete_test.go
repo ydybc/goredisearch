@@ -1,7 +1,7 @@
-package go_redisearch
+package goredisearch
 
 import (
-	"github.com/ydybc/go-redisearch/redisearch"
+	"github.com/ydybc/goredisearch/redisearch"
 	"log"
 	"testing"
 )
@@ -15,21 +15,22 @@ func TestNewAutoCompleter(t *testing.T) {
 	//
 	//初始化需要补全的句子
 	sugs := NewEmptySugList() //OR var sugs []redisearch.Suggestion{}
-	sugs = append(sugs, redisearch.Suggestion{Term: "还挺好还不错", Score: 1, Incr: true})
-	sugs = append(sugs, redisearch.Suggestion{Term: "还不错还挺好", Score: 1, Incr: true})
-	sugs = append(sugs, redisearch.Suggestion{Term: "还早", Score: 1, Incr: false})
-	sugs = append(sugs, redisearch.Suggestion{Term: "还好", Score: 1, Incr: false})
-	sugs = append(sugs, redisearch.Suggestion{Term: "还挺好", Score: 1, Incr: true})
-	sugs = append(sugs, redisearch.Suggestion{Term: "还不错", Score: 1, Incr: true})
+	sugs = append(sugs, redisearch.Suggestion{Term: "还挺好还不错", Score: 0.5, Incr: true})
+	sugs = append(sugs, redisearch.Suggestion{Term: "还不错还挺好", Score: 0.5, Incr: false})
+	sugs = append(sugs, redisearch.Suggestion{Term: "还早", Score: 0.5, Incr: false})
+	sugs = append(sugs, redisearch.Suggestion{Term: "还好", Score: 0.5, Incr: false})
+	sugs = append(sugs, redisearch.Suggestion{Term: "还挺好", Score: 0.5, Incr: true})
+	sugs = append(sugs, redisearch.Suggestion{Term: "还不错", Score: 0.5, Incr: true})
 	sugs = append(sugs, redisearch.Suggestion{Term: "还差不多", Score: 0.5, Incr: true})
 	sugs = append(sugs, redisearch.Suggestion{Term: "早上好", Score: 0.5, Incr: true})
+	sugs = append(sugs, redisearch.Suggestion{Term: "还不错还挺好", Score: 0.5, Incr: false})
 	//插入补全句
 	err = ac.AddSuggestions(sugs...)
 	if err != nil {
 		log.Fatal("AddSuggestions", err)
 	}
 	//查看补全
-	opts, err := ac.GetSuggestions("还", redisearch.SuggestOptions{Num: 5, Fuzzy: true, WithScores: true})
+	opts, err := ac.GetSuggestions("还", redisearch.SuggestOptions{Num: 10, Fuzzy: true, WithScores: true})
 	if err != nil {
 		log.Fatal("GetSuggestions", err)
 	}

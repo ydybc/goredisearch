@@ -2,7 +2,7 @@ package redisearch
 
 import (
 	"fmt"
-	"github.com/ydybc/go-redisearch/goRedis"
+	"github.com/ydybc/goredisearch/goRedis"
 )
 
 // FieldType is an enumeration of field/property types

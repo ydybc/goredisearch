@@ -3,7 +3,7 @@ package redisearch
 import (
 	"context"
 	"github.com/go-redis/redis/v8"
-	"github.com/ydybc/go-redisearch/goRedis"
+	"github.com/ydybc/goredisearch/goRedis"
 	"log"
 	"time"
 )

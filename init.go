@@ -1,1 +1,1 @@
-package go_redisearch
+package goredisearch

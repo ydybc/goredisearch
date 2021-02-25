@@ -1,4 +1,4 @@
-module github.com/ydybc/go-redisearch
+module github.com/ydybc/goredisearch
 
 go 1.15
 

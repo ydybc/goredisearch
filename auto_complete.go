@@ -1,11 +1,11 @@
-package go_redisearch
+package goredisearch
 
 import (
 	"context"
 	"fmt"
 	"github.com/go-redis/redis/v8"
-	"github.com/ydybc/go-redisearch/goRedis"
-	"github.com/ydybc/go-redisearch/redisearch"
+	"github.com/ydybc/goredisearch/goRedis"
+	"github.com/ydybc/goredisearch/redisearch"
 	"strconv"
 )
 
