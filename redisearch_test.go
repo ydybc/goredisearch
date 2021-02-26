@@ -55,19 +55,18 @@ func TestNewClient(t *testing.T) {
 	}
 	//组合索引数据
 	for k, v := range dogs {
-		v := NewDocument("dogInfo"+strconv.Itoa(k), 20).
+		instData = append(instData, NewDocument("dogInfo"+strconv.Itoa(k), 20).
 			Set("name", v.Name).
 			Set("feature", v.Feature).
 			Set("gender", v.Gender).
 			Set("length", v.Length).
-			Set("date", time.Now().Unix())
-		instData = append(instData, v)
+			Set("date", time.Now().Unix()))
 	}
-	//插入&更新 索引
-	if err := rs.Set(instData...); err != nil {
+	//插入&更新 索引 set indexData
+	if err = rs.Set(instData...); err != nil {
 		t.Error("SetIndex", err)
 	}
-	// 进行搜索
+	// 进行搜索 start Search
 	keyWord := "汪"
 	docs, total, err := rs.Search(redisearch.NewQuery(keyWord).
 		SetFlags(redisearch.QueryWithScores). //评分
