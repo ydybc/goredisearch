@@ -2,6 +2,7 @@ package goredisearch
 
 import (
 	"context"
+	"fmt"
 	"github.com/go-redis/redis/v8"
 	"github.com/ydybc/goredisearch/goRedis"
 	"github.com/ydybc/goredisearch/redisearch"
@@ -64,6 +65,7 @@ func (r RS) indexWithDefinition(schema *redisearch.Schema, definition *redisearc
 	}
 	//conn := i.pool.Get()
 	//defer conn.Close()
+	fmt.Printf("%+v\n", args)
 	_, err = redisearch.ClientDo(r.R, r.Ctx, args...)
 
 	//_, err = conn.Do("FT.CREATE", args...)

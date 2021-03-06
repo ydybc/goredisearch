@@ -12,6 +12,7 @@ type Dog struct {
 	Feature string
 	Gender  string
 	Length  int //m
+	Date    int64
 }
 
 //测试中文查询
@@ -31,17 +32,17 @@ func TestNewClient(t *testing.T) {
 		t.Error("Client", err)
 	}
 	//Weight 设置权重
-	name := redisearch.NewTextFieldOptions("name", redisearch.TextFieldOptions{Weight: 2.0, Sortable: true})
-	feature := redisearch.NewTextFieldOptions("feature", redisearch.TextFieldOptions{Weight: 2.0, Sortable: true})
-	gender := redisearch.NewTextField("gender")
-	weight := redisearch.NewNumericField("length")
+	name := redisearch.NewTextFieldOptions("Name", redisearch.TextFieldOptions{Weight: 2.0, Sortable: true})
+	feature := redisearch.NewTextFieldOptions("Feature", redisearch.TextFieldOptions{Weight: 2.0, Sortable: true})
+	gender := redisearch.NewTextField("Gender")
+	weight := redisearch.NewNumericField("Length")
 	// Create a schema
 	sc := redisearch.NewSchema(redisearch.DefaultOptions).
 		AddField(name).
 		AddField(feature).
 		AddField(gender).
 		AddField(weight).
-		AddField(redisearch.NewNumericField("date")) //时间
+		AddField(redisearch.NewNumericField("Date")) //时间
 	//设置语言
 	i := redisearch.NewIndexDefinition().SetLanguage("chinese").SetLanguageField("chinese")
 	//删除testIndex索引(如果有的话)
@@ -55,12 +56,13 @@ func TestNewClient(t *testing.T) {
 	}
 	//组合索引数据
 	for k, v := range dogs {
-		instData = append(instData, NewDocument("dogInfo"+strconv.Itoa(k), 20).
-			Set("name", v.Name).
-			Set("feature", v.Feature).
-			Set("gender", v.Gender).
-			Set("length", v.Length).
-			Set("date", time.Now().Unix()))
+		instData = append(instData,
+			NewDocument("dogInfo"+strconv.Itoa(k), 1).
+				Set("Name", v.Name).
+				Set("Feature", v.Feature).
+				Set("Gender", v.Gender).
+				Set("Length", v.Length).
+				Set("Date", time.Now().Unix()))
 	}
 	//插入&更新 索引 set indexData
 	if err = rs.Set(instData...); err != nil {
@@ -71,23 +73,23 @@ func TestNewClient(t *testing.T) {
 	docs, total, err := rs.Search(redisearch.NewQuery(keyWord).
 		SetFlags(redisearch.QueryWithScores). //评分
 		SetLanguage("chinese").               //使用什么分词器
-		SetInFields("name", "feature").       //在什么字段内搜索
+		SetInFields("Name", "Feature").       //在什么字段内搜索
 		Limit(0, 4).
 		Highlight(nil, "<b>", "</b>"))
 	t.Logf("word:%s,res:%+v,total:%d,err:%v\n", keyWord, docs, total, err)
 	keyWord = "公汪"
 	docs, total, err = rs.Search(redisearch.NewQuery(keyWord).
-		SetFlags(redisearch.QueryWithScores). //评分
-		SetLanguage("chinese").               //使用什么分词器
-		SetInFields("name", "feature").       //在什么字段内搜索
+		SetFlags(redisearch.QueryWithScores).
+		SetLanguage("chinese").
+		SetInFields("Name", "Feature").
 		Limit(0, 4).
 		Highlight(nil, "<b>", "</b>"))
 	t.Logf("word:%s,res:%+v,total:%d,err:%v\n", keyWord, docs, total, err)
 	keyWord = "母汪"
 	docs, total, err = rs.Search(redisearch.NewQuery(keyWord).
-		SetFlags(redisearch.QueryWithScores). //评分
-		SetLanguage("chinese").               //使用什么分词器
-		SetInFields("name", "feature").       //在什么字段内搜索
+		SetFlags(redisearch.QueryWithScores).
+		SetLanguage("chinese").
+		SetInFields("Name", "Feature").
 		Limit(0, 4).
 		Highlight(nil, "<b>", "</b>"))
 	t.Logf("word:%s,res:%+v,total:%d,err:%v\n", keyWord, docs, total, err)
